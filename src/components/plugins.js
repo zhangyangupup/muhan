@@ -1,7 +1,7 @@
-import ToastComponent from './ui/toast/toast.vue'
-import Confirm from './ui/confirm/confirm.vue'
-import Loading from './ui/loading/loading.vue'
-import Message from './ui/message/message.vue'
+import ToastComponent from './ui-pc/toast/toast.vue'
+import Confirm from './ui-pc/confirm/confirm.vue'
+import Loading from './ui-pc/loading/loading.vue'
+import Message from './ui-pc/message/message.vue'
 const Xui = function (Vue) {
   Vue.prototype.$ui = {}
 }

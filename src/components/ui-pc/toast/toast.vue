@@ -56,17 +56,17 @@ export default {
 <style lang="stylus">
 .ui-toast
   padding 3px 20px
-  line-height 1.9rem
-  font-size 1rem
+  line-height 1.5rem
+  font-size 0.8rem
   color #fff
   position fixed
   left 50%
   z-index 999
   text-align center
-  border-radius 5px
+  border-radius 3px
   transition all 0.3s
   transform translate(-50%, -50%)
-  background-color rgba(0, 0, 0, 0.9)
+  background-color rgba(0, 0, 0, 0.7)
 .toast-top
   top 20%
   animation keyframes1 0.6s

@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <router-view />
+    <home />
   </div>
 </template>
 <script>
+import Home from './views/home'
 export default {
   components: {
+    Home
   },
   mounted () {
     // this.$router.replace({ name: 'barConfig' })
