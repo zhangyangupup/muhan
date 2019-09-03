@@ -2,6 +2,7 @@ import ToastComponent from './ui-pc/toast/toast.vue'
 import Confirm from './ui-pc/confirm/confirm.vue'
 import Loading from './ui-pc/loading/loading.vue'
 import Message from './ui-pc/message/message.vue'
+import NoticeCom from './ui-pc/notification/index.vue'
 const Xui = function (Vue) {
   Vue.prototype.$ui = {}
 }
@@ -23,6 +24,8 @@ const Toast = {
         if (position === 'top' || position === 'middle' || position === 'bottom') {
           ToastPlugin.position = position
         }
+      } else {
+        ToastPlugin.position = 'bottom'
       }
       ToastPlugin.$mount(document.createElement('div'))
       document.body.appendChild(ToastPlugin.$el)
@@ -157,6 +160,37 @@ const message = {
   }
 }
 /**
+ * Notice
+ * text:字符串提示文字
+ * type:类型
+ * time:number 自动消失时间
+ */
+const Notice = {
+  install (Vue) {
+    Vue.prototype.$ui.notice = (text, type, time) => {
+      if (!time) {
+        time = 2000
+      }
+      const ToastConstructor = Vue.extend(NoticeCom)
+      const ToastPlugin = new ToastConstructor()
+      ToastPlugin.text = text
+      if (type) {
+        if (type === 'success' || type === 'error' || type === 'warning') {
+          ToastPlugin.type = type
+        }
+      } else {
+        ToastPlugin.type = 'default'
+      }
+      ToastPlugin.$mount(document.createElement('div'))
+      document.body.appendChild(ToastPlugin.$el)
+
+      setTimeout(() => {
+        ToastPlugin.$el.parentNode.removeChild(ToastPlugin.$el)
+      }, time)
+    }
+  }
+}
+/**
  * Notification全局组件
  */
-export { Xui, Toast, confirm, loading, message }
+export { Xui, Toast, confirm, loading, message, Notice }

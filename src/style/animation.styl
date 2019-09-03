@@ -41,16 +41,16 @@ to {
  opacity:1;
  }
 }
+// 主页面过渡
 .fade-enter-active {
-  animation: fadeAni 0.3s linear
+  animation: fadeAni 0.2s ease-in
 }
 .fade-leave-active {
-  animation: fadeAni-l 0.3s linear
+  animation: fadeAni-l 0.2s ease-in
 }
 @keyframes fadeAni {
   0%{
-    // opacity 0
-    transform: translateX(100%)
+    transform: translateY(-100%)
     }
   100%{
     opacity 1
@@ -62,6 +62,29 @@ to {
     left 0
     }
   100%{
-    transform: translateX(-100%)
+    transform: translatey(100%)
+    }
+}
+// main页面子路由过渡
+.main-enter-active{
+  animation: main-anin 0.2s ease
+}
+.main-leave-active{
+  animation: main-anileave 0.2s ease
+}
+@keyframes main-anin{
+  0%{
+    transform: translateX(100%)
+    }
+  100%{
+    left 0
+    }
+}
+@keyframes main-anileave{
+  0%{
+    left 0
+    }
+  100%{
+    transform: translateX(100%)
     }
 }

@@ -28,7 +28,6 @@ export default {
     }
   },
   mounted () {
-    debugger
     if (this.position === 'bottom') {
       this.className = 'toast-bottom'
     } else if (this.position === 'middle') {
@@ -74,7 +73,7 @@ export default {
   top 50%
   animation keyframes2 0.6s
 .toast-bottom
-  top 80%
+  top 90%
   animation keyframes3 0.6s
 @keyframes keyframes1
   from
@@ -90,5 +89,5 @@ export default {
   from
     top -50%
   to
-    top 80%
+    top 90%
 </style>

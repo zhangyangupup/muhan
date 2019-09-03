@@ -106,7 +106,8 @@ export default {
     },
     goToPage (path) {
       // this.$message('功能暂未开放，敬请期待...')
-      this.$ui.toast('暂不提供此功能')
+      // this.$ui.toast('暂不提供此功能')
+      this.$ui.notice('暂不提供此功能', 'warning')
     }
   }
 }

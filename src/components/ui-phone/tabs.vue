@@ -30,7 +30,7 @@ export default {
   methods: {
     chooseThis (index, item) {
       this.chooseIndex = index
-      this.$router.push({ name: item.path })
+      this.$router.push({ path: `/main/${item.path}` })
     }
   }
 }

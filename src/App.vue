@@ -1,16 +1,20 @@
 <template>
   <div id="app">
-    <home />
+    <!-- <home /> -->
+    <transition name='fade'
+                mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
 <script>
-import Home from './views/home'
+// import Home from './views/home'
 export default {
   components: {
-    Home
+    // Home
   },
   mounted () {
-    // this.$router.replace({ name: 'barConfig' })
+    this.$router.replace({ path: '/main' })
   }
 }
 </script>
