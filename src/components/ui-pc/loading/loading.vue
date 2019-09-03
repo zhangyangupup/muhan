@@ -51,10 +51,13 @@ export default {
       color #fff
       animation loadingKey 0.8s linear infinite
     p
+      display inline-block
       font-size 0.8rem
       line-height 3rem
       color #2c3e50
       text-align center
+      margin-left 50%
+      transform translateX(-50%)
 @keyframes loadingKey
   0%
     transform rotate(360deg)

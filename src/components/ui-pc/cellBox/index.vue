@@ -86,7 +86,6 @@ export default {
       this.modelValue = this.value
       if (this.modelValue.length > 0) {
         this.showClear = true
-        console.log(this)
         this.$el.querySelector('.ui-input-box').type = this.type
       } else {
         this.showClear = false

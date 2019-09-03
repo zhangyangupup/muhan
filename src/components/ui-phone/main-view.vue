@@ -2,21 +2,20 @@
   <!-- 视窗组件 -->
   <div class="ui-view-main">
     <!-- 头部 -->
-    <div class="view-header-box">
+    <div v-if="header"
+         class="view-header-box">
       <slot name="header">
-        header
       </slot>
     </div>
     <!-- 主题内容区 -->
     <div class="view-main-box">
       <slot name='body'>
-        body
       </slot>
     </div>
     <!-- 页脚 -->
-    <div class="view-footer-box">
+    <div v-if="footer"
+         class="view-footer-box">
       <slot name="footer">
-        footer
       </slot>
     </div>
   </div>
@@ -51,6 +50,11 @@ export default {
     flex 0 50px
   .view-main-box
     flex 1
+    display flex
+    flex-direction column
+  .view-main-box>div
+    flex-grow 1
+    overflow hidden
   .view-footer-box
     flex 0 50px
 </style>

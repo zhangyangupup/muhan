@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!-- <home /> -->
     <transition name='fade'
                 mode="out-in">
       <router-view />
@@ -8,12 +7,14 @@
   </div>
 </template>
 <script>
-// import Home from './views/home'
 export default {
   components: {
-    // Home
+  },
+  beforeCreate () {
+    this.$ui.loading.show()
   },
   mounted () {
+    this.$ui.loading.hide()
     this.$router.replace({ path: '/main' })
   }
 }
