@@ -40,6 +40,7 @@ export default {
 .ui-tabs-box
   display flex
   flex-direction row
+  background-color #f8f8f8
   ul
     flex-grow 1
     display flex

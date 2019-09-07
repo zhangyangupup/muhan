@@ -44,7 +44,7 @@ export default {
       this.positionY = e.changedTouches[0].clientY
     },
     move (e) {
-      if (e.changedTouches[0].clientY - this.positionY > 40 && e.changedTouches[0].clientY - this.positionY < 150) {
+      if (e.changedTouches[0].clientY - this.positionY > 40 && e.changedTouches[0].clientY - this.positionY < 120) {
         let node = document.getElementById('page1mask')
         this.loading = true
         node.style.transform = `translateY(${e.changedTouches[0].clientY - this.positionY}px)`
@@ -66,7 +66,7 @@ export default {
   .scroll-content
     width 100%
     height 100%
-    box-shadow -1px 0 10px #ccc
+    // box-shadow -1px 0 10px #ccc
     // transform translateY(200px)
     transition all 0.3s linear
     background-color $bgcolor

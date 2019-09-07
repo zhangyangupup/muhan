@@ -67,10 +67,10 @@ to {
 }
 // main页面子路由过渡
 .main-enter-active{
-  animation: main-anin 0.2s ease
+  animation: main-anin 0.3s ease-in
 }
 .main-leave-active{
-  animation: main-anileave 0.2s ease
+  animation: main-anileave 0.3s ease-out
 }
 @keyframes main-anin{
   0%{
@@ -85,6 +85,6 @@ to {
     left 0
     }
   100%{
-    transform: translateX(100%)
+    transform: translateX(-100%)
     }
 }

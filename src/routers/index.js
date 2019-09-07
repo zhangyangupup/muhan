@@ -14,11 +14,11 @@ let routes = [
       },
       {
         path: 'personal',
-        component: () => import('../views/main/applications/index.vue')
+        component: () => import('../views/main/personal/index.vue')
       },
       {
         path: 'applications',
-        component: () => import('../views/main/personal/index.vue')
+        component: () => import('../views/main/applications/index.vue')
       }
     ]
   },
